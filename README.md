@@ -31,7 +31,4 @@ Some example project ideas from previous classes:
 - start styling/ cleaning up issues. 
 - issue cleanup and final demos. 
 
-**Be prepared to demo something by 11 am Friday**. 
-
-
 
