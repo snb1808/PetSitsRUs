@@ -6,7 +6,7 @@ Congratulations, we are starting project mode! This means that you'll spend the 
 Some example project ideas from previous classes:
 
 1. [Regifter](http://regifter.herokuapp.com/) - A gift trading app that lets users upload images and descriptions of unwanted gifts and propose trades with other users.
-2. [Flatiron Postcard](http://www.flatironpostcard.com/) - An app that lets you create and send custom postcards to friends and family
+2. [Flatiron Postcard](http://flatironpostcard.herokuapp.com/) - An app that lets you create and send custom postcards to friends and family
 3. Petster - A social media site for pets
 
 
