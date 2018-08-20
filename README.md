@@ -6,8 +6,11 @@ Congratulations, we are starting project mode! This means that you'll spend the 
 Some example project ideas from previous classes:
 
 1. [Regifter](http://regifter.herokuapp.com/) - A gift trading app that lets users upload images and descriptions of unwanted gifts and propose trades with other users.
-2. [Flatiron Postcard](http://flatironpostcard.herokuapp.com/) - An app that lets you create and send custom postcards to friends and family
-3. Petster - A social media site for pets
+1. [Flatiron Postcard](http://flatironpostcard.herokuapp.com/) - An app that lets you create and send custom postcards to friends and family
+1. Petster - A social media site for pets
+1. [ROBYStuff - Rent or Buy Your Stuff](https://stark-falls-90133.herokuapp.com/listings)
+1. [Planning Ahead - Plan Your Funeral](https://ancient-mesa-18771.herokuapp.com/users/summary)
+1. [JOBuddy - Assistance with Job Applications](https://sheltered-woodland-79144.herokuapp.com/)
 
 
 ## Requirements:
