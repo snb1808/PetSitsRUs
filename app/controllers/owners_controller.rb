@@ -10,7 +10,7 @@ class OwnersController < ApplicationController
   end
 
   def create
-    @owner = Owner.new
+    @owner = Owner.new(owner_params)
     if @owner.valid?
       @owner.save
       redirect_to owner_path(@owner)
@@ -26,8 +26,13 @@ class OwnersController < ApplicationController
   end
 
   def update
-    @owner.update(owner_params)
-    redirect_to owner_path(@owner)
+    test_validity = Owner.new(owner_params)
+    if test_validity.valid?
+      @owner.update(owner_params)
+      redirect_to owner_path(@owner)
+    else
+      render edit_appointment_path
+    end
   end
 
   def destroy
