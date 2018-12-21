@@ -2,7 +2,6 @@ class Owner < ApplicationRecord
 
   validates :username, uniqueness: true
   validates :email, uniqueness: true
-  validates :telephone_number, numericality: { only_integer: true}
 
   has_many :pets
   has_many :appointments, through: :pets

@@ -1,8 +1,8 @@
 <h1>Profile</h1>
 
-<img src="<%= @owner.img_url %>">
+<img src="<%= @owner.img_url %>" height="200">
 
-<h2><%= @owner.first_name @owner.last_name %></h2>
+<h2><%= "#{@owner.first_name} #{@owner.last_name}" %></h2>
 
 <p>Username: <%= @owner.username %></p>
 

@@ -15,7 +15,8 @@ class OwnersController < ApplicationController
       @owner.save
       redirect_to owner_path(@owner)
     else
-      render new_owner_path
+      flash[:errors] = @owner.errors.full_messages
+      redirect_to new_owner_path
     end
   end
 
@@ -31,7 +32,8 @@ class OwnersController < ApplicationController
       @owner.update(owner_params)
       redirect_to owner_path(@owner)
     else
-      render edit_appointment_path
+      flash[:errors] = @owner.errors.full_messages
+      redirect_to edit_appointment_path
     end
   end
 
@@ -47,7 +49,7 @@ class OwnersController < ApplicationController
   end
 
   def owner_params
-    params.permit(:first_name, :last_name, :username, :address, :telephone_number, :email, :img_url)
+    params.require(:owner).permit(:first_name, :last_name, :username, :address, :telephone_number, :email, :img_url)
   end
 
 end
