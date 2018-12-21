@@ -1,0 +1,25 @@
+<%= form_for @pet do |f| %>
+
+  <% genders = [{name: 'Male'}, {name: 'Female'}, {name: 'Not Sure'}] %>
+
+  <p><%= f.label 'Name' %></p>
+  <p><%= f.text_field :name %></p>
+
+  <p><%= f.label 'Species' %></p>
+  <p><%= f.text_field :species %></p>
+
+  <p><%= f.label 'Gender' %></p>
+  <p><%= f.collection_select(:gender, genders, :name, :name) %></p>
+
+  <p><%= f.label 'Age' %></p>
+  <p><%= f.text_field :age %></p>
+
+  <p><%= f.label 'Image URL' %></p>
+  <p><%= f.text_field :img_url %></p>
+
+
+  <p><%= f.submit %></p>
+
+<% end %>
+
+<%= button_to "Back", owner_path(@pet.owner) %>
