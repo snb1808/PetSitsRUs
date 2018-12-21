@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2018-12-21
+  end_date: 2018-12-21
+  pet_id: 1
+  sitter_id: 1
+
+two:
+  start_date: 2018-12-21
+  end_date: 2018-12-21
+  pet_id: 1
+  sitter_id: 1
