@@ -1,0 +1,14 @@
+<h1>Profile</h1>
+
+<img src="<%= @owner.img_url %>">
+
+<h2><%= @owner.first_name @owner.last_name %></h2>
+
+<p>Username: <%= @owner.username %></p>
+
+<h3>Contact:</h3>
+<p>Address: <%= @owner.address %></p>
+<p>Telephone number: <%= @owner.telephone_number %></p>
+<p>Email: <%= @owner.email %></p>
+
+<%= button_to 'Home', owners_path %>
