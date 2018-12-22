@@ -1,3 +1,6 @@
-<h1>🐶🐱🐰🐷🐠Welcome to PetSitsRUs!!🐶🐱🐰🐷🐠</h1>
+<center><h1>🐶🐱🐰🐷🐠Welcome to PetSitsRUs!!🐶🐱🐰🐷🐠</h1>
 
-<%= link_to 'New User', new_owner_path %>
+<%= form_tag new_owner_path, method: 'get' do %>
+<%= submit_tag 'New User' %>
+<% end %>
+</center>

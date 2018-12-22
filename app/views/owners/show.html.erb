@@ -1,4 +1,4 @@
-<h1>Profile</h1>
+<center><h1>Profile</h1>
 
 <img src="<%= @owner.img_url %>" height="200">
 
@@ -11,4 +11,7 @@
 <p>Telephone number: <%= @owner.telephone_number %></p>
 <p>Email: <%= @owner.email %></p>
 
-<%= button_to 'Home', owners_path %>
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %>
+<% end %>
+</center>
