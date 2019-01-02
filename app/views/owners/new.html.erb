@@ -1,4 +1,8 @@
-<center><h1>New User</h1>
+<center><h1>Create a New User</h1>
 
 <%= render 'form' %>
+
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %><br>
+<% end %>
 </center>

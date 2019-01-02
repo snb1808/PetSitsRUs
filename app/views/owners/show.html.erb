@@ -1,4 +1,4 @@
-<center><h1>Profile</h1>
+<center><h1>My Profile</h1>
 
 <img src="<%= @owner.img_url %>" height="200">
 
@@ -32,5 +32,11 @@
 <%= submit_tag 'Create an Appointment' %><br>
 <% end %>
 
+<<<<<<< HEAD
 <%= link_to 'Appointments', appointments_path(@appointment) %><br>
+=======
+<%= form_tag owner_path(@owner), method: 'delete' do %>
+<%= submit_tag "Delete Account", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+>>>>>>> 4bab2ea7ef55ddfc09c22fbe1098dbe27c5cc238
 </center>

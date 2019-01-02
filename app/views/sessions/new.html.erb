@@ -1,4 +1,6 @@
 <center>
+  <h1>Login</h1>
+  
   <%= form_tag login_path, method: 'post' do %>
   <%= label_tag :username %>
   <%= text_field_tag :username %><br>
@@ -9,4 +11,9 @@
   <%= submit_tag 'Login' %>
 
 <% end %>
+
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %><br>
+<% end %>
+
 </center>
