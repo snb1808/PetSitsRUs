@@ -2,6 +2,10 @@ class AppointmentsController < ApplicationController
 
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @appointments = Appointment.all.select {|app| app.pet.owner_id == session[:owner_id]}
+  end
+
   def new
     @appointment = Appointment.new
   end

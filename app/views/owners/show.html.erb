@@ -31,4 +31,6 @@
 <%= form_tag new_appointment_path, method: 'get' do %>
 <%= submit_tag 'Create an Appointment' %><br>
 <% end %>
+
+<%= link_to 'Appointments', appointments_path(@appointment) %><br>
 </center>

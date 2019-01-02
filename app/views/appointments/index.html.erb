@@ -3,11 +3,10 @@
 <ul>
   <% @appointments.each do |appointment| %>
     <li>
-      <%= link_to "#{appointment.}", appointment %>
+      <%= link_to appointment.id, appointment_path(appointment) %>
     </li>
     <br>
   <% end %>
 </ul>
-<%= form_tag owners_path, method: 'get' do %>
-<%= submit_tag 'Home' %>
-<% end %>
+
+<%= link_to 'Home', owners_path(@owner) %><br>
