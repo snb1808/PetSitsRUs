@@ -15,8 +15,7 @@ class OwnersController < ApplicationController
     @owner = Owner.new(owner_params)
     if @owner.valid?
       @owner.save
-      flash[:notice] = "Welcome to PetSitsRUs, #{@owner.first_name}!"
-      flash[:color]= "valid"
+      session[:owner_id] = @owner.id
       redirect_to owner_path(@owner)
     else
       flash[:errors] = @owner.errors.full_messages
