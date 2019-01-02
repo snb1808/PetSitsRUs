@@ -1,0 +1,13 @@
+<h2>All Appointments</h2>
+
+<ul>
+  <% @appointments.each do |appointment| %>
+    <li>
+      <%= link_to "#{appointment.}", appointment %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %>
+<% end %>
