@@ -7,7 +7,7 @@
 
 <p>Species: <%= @pet.species %></p>
 <p>Age: <%= @pet.age %></p>
-<p>Gender: <%= @pet.gender %></p>
+<p>Gender: <%= @pet.gender.capitalize %></p>
 <p>Address: <%= @pet.owner.address %></p>
 
 <%= form_tag owner_path(@pet.owner), method: 'get' do %>
