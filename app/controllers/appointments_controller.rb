@@ -7,13 +7,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.new(appointment_params)
-    if @appointment.valid?
-      @appointment.create
-      redirect_to appointment_path(@appointment)
-    else
-      render new_appointment_path
-    end
+    @appointment = Appointment.create(appointment_params)
+    redirect_to appointment_path(@appointment)
   end
 
   def show
