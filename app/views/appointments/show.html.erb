@@ -1,6 +1,5 @@
-<center><h1>Appointment</h1>
+<center><h1>Appointment Details</h1>
 
-<h2>Appointment:</h2>
 <p>Pet: <%= @appointment.pet.name %></p>
 <p>Start Date: <%= @appointment.start_date %></p>
 <p>End Date: <%= @appointment.start_date  %></p>
@@ -13,4 +12,9 @@
 <%= form_tag owner_path(@appointment.pet.owner), method: 'get' do %>
 <%= submit_tag 'Your Profile' %>
 <% end %>
+
+<%= form_tag appointment_path(@appointment), method: 'delete' do %>
+<%= submit_tag "Delete Appointment", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+
 </center>

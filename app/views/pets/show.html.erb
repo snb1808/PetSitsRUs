@@ -18,4 +18,8 @@
 <%= submit_tag 'Edit Pet Details' %>
 <% end %>
 
+<%= form_tag pet_path(@pet), method: 'delete' do %>
+<%= submit_tag "Delete Pet", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+
 </center>

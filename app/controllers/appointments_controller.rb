@@ -28,7 +28,7 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
-    @owner = @appointment.owner
+    @owner = @appointment.pet.owner
     @appointment.destroy
     redirect_to owner_path(@owner)
   end
