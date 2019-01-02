@@ -31,4 +31,8 @@
 <%= form_tag new_appointment_path, method: 'get' do %>
 <%= submit_tag 'Create an Appointment' %><br>
 <% end %>
+
+<%= form_tag owner_path(@owner), method: 'delete' do %>
+<%= submit_tag "Delete Account", data: { confirm: "Are you sure?" } %><br>
+<% end %>
 </center>

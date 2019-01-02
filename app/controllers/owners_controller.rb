@@ -30,18 +30,13 @@ class OwnersController < ApplicationController
   end
 
   def update
-    test_validity = Owner.new(owner_params)
-    if test_validity.valid?
       @owner.update(owner_params)
       redirect_to owner_path(@owner)
-    else
-      flash[:errors] = @owner.errors.full_messages
-      redirect_to edit_appointment_path
-    end
   end
 
   def destroy
     @owner.destroy
+    session[:owner_id] = nil
     redirect_to owners_path
   end
 
