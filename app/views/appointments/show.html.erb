@@ -1,11 +1,16 @@
 <center><h1>Appointment</h1>
 
-<h3>Appointment:</h3>
+<h2>Appointment:</h2>
 <p>Pet: <%= @appointment.pet.name %></p>
 <p>Start Date: <%= @appointment.start_date %></p>
 <p>End Date: <%= @appointment.start_date  %></p>
+<p>Sitter: <%= @appointment.sitter.full_name %></p>
 
-<%= form_tag appoinments_path, method: 'get' do %>
-<%= submit_tag 'Appoinments' %>
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %>
+<% end %>
+
+<%= form_tag owner_path(@appointment.pet.owner), method: 'get' do %>
+<%= submit_tag 'Your Profile' %>
 <% end %>
 </center>
