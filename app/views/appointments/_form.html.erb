@@ -1,0 +1,15 @@
+<center><%= form_for @appointment do |f| %>
+
+  <p><%= f.label 'pet_id' %></p>
+  <%= f.collection_check_boxes :pet_id, Pet.all, :id, :name %><br>
+
+  <p><%= f.label 'start_date' %></p>
+  <p><%= f.date_select :start_date %></p>
+
+  <p><%= f.label 'end_date' %></p>
+  <p><%= f.date_select :end_date %></p>
+
+
+  <p><%= f.submit %></p>
+
+<% end %>

@@ -1,0 +1,10 @@
+<center><h1>Appointment</h1>
+
+<h3>Appointment:</h3>
+<p>Start Date: <%= @appointment.start_date %></p>
+<p>End Date: <%= @appointment.start_date  %></p>
+
+<%= form_tag appoinments_path, method: 'get' do %>
+<%= submit_tag 'Appoinments' %>
+<% end %>
+</center>
