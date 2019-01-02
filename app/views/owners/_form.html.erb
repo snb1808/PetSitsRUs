@@ -21,6 +21,12 @@
   <p><%= f.label 'Image URL' %></p>
   <p><%= f.text_field :img_url %></p>
 
+  <p><%= f.label 'Password' %></p>
+  <p><%= f.password_field :password %></p>
+
+  <p><%= f.label 'Confirm Password' %></p>
+  <p><%= f.password_field :password_confirmation %></p>
+
   <p><%= f.submit %></p>
 
 <% end %>

@@ -1,5 +1,7 @@
 class OwnersController < ApplicationController
 
+  before_action :require_login
+  skip_before_action :require_login, only: [:index, :new, :create]
   before_action :set_owner, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -13,6 +15,8 @@ class OwnersController < ApplicationController
     @owner = Owner.new(owner_params)
     if @owner.valid?
       @owner.save
+      flash[:notice] = "Welcome to PetSitsRUs, #{@owner.first_name}!"
+      flash[:color]= "valid"
       redirect_to owner_path(@owner)
     else
       flash[:errors] = @owner.errors.full_messages
@@ -44,12 +48,16 @@ class OwnersController < ApplicationController
 
   private
 
+  def require_login
+    return head(:forbidden) unless session.include? :owner_id
+  end
+
   def set_owner
     @owner = Owner.find(params[:id])
   end
 
   def owner_params
-    params.require(:owner).permit(:first_name, :last_name, :username, :address, :telephone_number, :email, :img_url)
+    params.require(:owner).permit(:first_name, :last_name, :username, :address, :telephone_number, :email, :img_url, :password, :password_confirmation)
   end
 
 end
