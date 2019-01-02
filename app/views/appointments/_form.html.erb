@@ -3,6 +3,9 @@
   <p><%= f.label 'pet_id' %></p>
   <%= f.collection_check_boxes :pet_id, Pet.all, :id, :name %><br>
 
+  <p><%= f.label 'sitter_id' %></p>
+  <%= f.collection_select :sitter_id, Sitter.all, :id, :first_name %><br>
+
   <p><%= f.label 'start_date' %></p>
   <p><%= f.date_select :start_date %></p>
 
@@ -12,4 +15,8 @@
 
   <p><%= f.submit %></p>
 
+<% end %>
+
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %>
 <% end %>
