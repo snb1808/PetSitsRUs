@@ -1,6 +1,7 @@
+<center>
 <h1>Pet Profile</h1>
 
-<img src="<%= @pet.img_url %>">
+<img src="<%= @pet.img_url %>" height=200>
 
 <h2><%= @pet.name %></h2>
 
@@ -9,5 +10,12 @@
 <p>Gender: <%= @pet.gender %></p>
 <p>Address: <%= @pet.owner.address %></p>
 
-<p><%= button_to 'Back to User Profile', owner_path(@pet.owner) %></p>
-<p><%= button_to 'Edit details', edit_pet_path(@pet) %></p>
+<%= form_tag owner_path(@pet.owner), method: 'get' do %>
+<%= submit_tag 'Back to Owner' %>
+<% end %>
+
+<%= form_tag edit_pet_path, method: 'get' do %>
+<%= submit_tag 'Edit Pet Details' %>
+<% end %>
+
+</center>

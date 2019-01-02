@@ -1,6 +1,6 @@
 <%= form_for @pet do |f| %>
 
-  <% genders = [{name: 'Male'}, {name: 'Female'}, {name: 'Not Sure'}] %>
+  <% genders = ['Male', 'Female', 'Not Sure'] %>
 
   <p><%= f.label 'Name' %></p>
   <p><%= f.text_field :name %></p>
@@ -9,7 +9,7 @@
   <p><%= f.text_field :species %></p>
 
   <p><%= f.label 'Gender' %></p>
-  <p><%= f.collection_select(:gender, genders, :name, :name) %></p>
+  <p><%= f.collection_select(:gender, genders, :downcase, :to_s) %></p>
 
   <p><%= f.label 'Age' %></p>
   <p><%= f.text_field :age %></p>
@@ -17,9 +17,18 @@
   <p><%= f.label 'Image URL' %></p>
   <p><%= f.text_field :img_url %></p>
 
+  <%= f.hidden_field(:owner_id, :value => session[:owner_id]) %>
 
   <p><%= f.submit %></p>
 
 <% end %>
 
-<%= button_to "Back", owner_path(@pet.owner) %>
+<%# <% owner = Owner.find_by(id: session[:owner_id]) %>
+
+<%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %>
+<% end %>
+
+<%= form_tag owner_path(session[:owner_id]), method: 'get' do %>
+<%= submit_tag 'Your Profile' %>
+<% end %>
