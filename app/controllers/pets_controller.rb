@@ -7,13 +7,8 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = Pet.new(pet_params)
-    if @pet.valid?
-      @pet.save
+    @pet = Pet.create(pet_params)
       redirect_to pet_path(@pet)
-    else
-      render new_pet_path
-    end
   end
 
   def show
