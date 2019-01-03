@@ -57,4 +57,24 @@
 <% end %>
 
 
+<<<<<<< HEAD
+=======
+<%= form_tag new_pet_path, method: 'get' do %>
+<%= submit_tag 'Add a Pet' %><br>
+<% end %>
+
+<%= form_tag new_appointment_path, method: 'get' do %>
+<%= submit_tag 'Create an Appointment' %><br>
+<% end %>
+
+<%= form_tag appointments_path, method: 'get' do %>
+<%= submit_tag "My Appointments" %><br>
+<% end %>
+
+<%= form_tag owner_path(@owner), method: 'delete' do %>
+<%= submit_tag "Delete Account", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+
+
+>>>>>>> 3498c9e2555aa931a1e461b181d95f24fea92e45
 </center>
