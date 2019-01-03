@@ -6,6 +6,8 @@
   <p><%= f.label 'sitter_id' %></p>
   <%= f.collection_select :sitter_id, Sitter.all, :id, :full_name %><br>
 
+  <%= link_to('See all Sitter Details', { action: 'index', controller: 'sitters' }, { target: '_blank' }) %>
+
   <p><%= f.label 'start_date' %></p>
   <p><%= f.date_select :start_date %></p>
 
