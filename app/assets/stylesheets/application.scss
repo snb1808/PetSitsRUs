@@ -10,25 +10,5 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
- body {
- 	font-family: Abril Fatface;
- 	font-size: 26px;
- 	line-height: 1.5;
-
- 	background-color: #000000;
- 	color: #ffffff;
- 	margin: 40px auto 40px auto;
- 	width: 620px;
- }
-
- h1 {
- 	font-size: 30px;
- 	font-weight: 700;
- }
-
- a {
-   color: #7fdbff;
- }
+ @import "bootstrap";
