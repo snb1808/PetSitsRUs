@@ -13,6 +13,10 @@
 <%= submit_tag 'Your Profile' %>
 <% end %>
 
+<%= form_tag appointments_path, method: 'get' do %>
+<%= submit_tag 'Back to all Appointments' %>
+<% end %>
+
 <%= form_tag appointment_path(@appointment), method: 'delete' do %>
 <%= submit_tag "Delete Appointment", data: { confirm: "Are you sure?" } %><br>
 <% end %>

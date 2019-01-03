@@ -1,12 +1,12 @@
-<h2>All Appointments</h2>
+<center><h2>All Appointments</h2>
 
-<ul>
   <% @appointments.each do |appointment| %>
-    <li>
-      <%= link_to appointment.id, appointment_path(appointment) %>
-    </li>
-    <br>
+    <div>
+      <%= link_to "#{appointment.pet.name} beginning #{appointment.start_date}", appointment_path(appointment) %>
+    </div>
   <% end %>
-</ul>
 
-<%= link_to 'Home', owners_path(@owner) %><br>
+<%= link_to 'Back to Profile', owner_path(session[:owner_id]) %><br>
+<%= link_to 'Home', owners_path %><br>
+
+</center>

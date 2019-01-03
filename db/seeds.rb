@@ -46,15 +46,15 @@ Sitter.destroy_all
 # ]
 # pets.each {|pet| Pet.create(pet)}
 sitters = [
-{first_name: "Dave", last_name: "Jones", gender: "Male"},
-{first_name: "Susan", last_name: "Boyle", gender: "Female"},
-{first_name: "Lucy", last_name: "Mitchel", gender: "Female"},
-{first_name: "Guy", last_name: "Bennett-Jones", gender: "Male"},
-{first_name: "Meghan", last_name: "Markle", gender: "Female"},
-{first_name: "William", last_name: "Windsor", gender: "Male"},
-{first_name: "Harry", last_name: "Windsor", gender: "Male"},
-{first_name: "Ricky", last_name: "Gervais", gender: "Male"},
-{first_name: "Declan", last_name: "Donelly", gender: "Male"},
-{first_name: "Simon", last_name: "Cowell", gender: "Male"},
+{first_name: "Davy", last_name: "Jones", gender: "Male", description: "Davy is great with all aquatic pets."},
+{first_name: "Susan", last_name: "Boyle", gender: "Female", description: "Susan is ideal for looking after birds unless you have neighbours who complain about noise."},
+{first_name: "Lucy", last_name: "Mitchel", gender: "Female", description: "Loves cats"},
+{first_name: "Guy", last_name: "Bennett-Jones", gender: "Male", description: "If you need someone to look after your coding monkey - this is your Guy."},
+{first_name: "Meghan", last_name: "Markle", gender: "Female", description: "Great with dogs and cats - allergic to rabbits."},
+{first_name: "William", last_name: "Windsor", gender: "Male", description: "Amazing with invertebrates and reptiles."},
+{first_name: "Harry", last_name: "Windsor", gender: "Male", description: "Dog's best friend."},
+{first_name: "Ricky", last_name: "Gervais", gender: "Male", description: "All-round amazing with all species, except humans."},
+{first_name: "Declan", last_name: "Donelly", gender: "Male", description: "Energetic sitter. Ideal for playful/young/boisterous pets."},
+{first_name: "Simon", last_name: "Cowell", gender: "Male", description: "Doubles as a pet trainer. Great for long-term appointments as he has more time to whip your pets into shape."},
 ]
 sitters.each {|sitter| Sitter.create(sitter)}

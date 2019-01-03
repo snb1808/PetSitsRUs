@@ -1,6 +1,7 @@
-<h1>All Sitters</h1>
+<center><h1>All Sitters</h1>
 
 <% @sitters.each do |sitter| %>
-<h3><%= sitter.full_name %></h3>
-
-<% end %>
+<div><h3><%= sitter.full_name %></h3>
+  <p><%= sitter.gender %></p>
+<p><%= sitter.description %></p></div>
+<% end %></center>
