@@ -1,7 +1,10 @@
 <center><%= form_for @appointment do |f| %>
 
+  <% @owner = Owner.find_by(id: session[:owner_id]) %>
+  <% @pets = @owner.pets %>
+
   <p><%= f.label 'pet_id' %></p>
-  <p><%= f.collection_select :pet_id, Pet.all, :id, :name %></p>
+  <p><%= f.collection_select :pet_id, @pets, :id, :name %></p>
 
   <p><%= f.label 'sitter_id' %></p>
   <p><%= f.collection_select :sitter_id, Sitter.all, :id, :full_name %><br>
@@ -15,8 +18,4 @@
 
   <p><%= f.submit %></p>
 
-<% end %>
-
-<%= form_tag owners_path, method: 'get' do %>
-<%= submit_tag 'Home' %>
 <% end %>

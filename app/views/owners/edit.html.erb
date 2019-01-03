@@ -2,4 +2,8 @@
 
 <%= render 'form' %>
 
+<%= form_tag owner_path(@owner), method: 'delete' do %>
+<%= submit_tag "Delete Account", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+
 </center>

@@ -2,4 +2,9 @@
 <h1>Edit Pet</h1>
 
 <%= render 'form' %>
+
+<%= form_tag pet_path(@pet), method: 'delete' do %>
+  <%= submit_tag "Delete Pet", data: { confirm: "Are you sure?" } %><br>
+<% end %>
+
 </center>

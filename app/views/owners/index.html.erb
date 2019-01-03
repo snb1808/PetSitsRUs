@@ -1,3 +1,4 @@
+<img src="">
 <center><h1>🐶🐱🐰🐷🐠Welcome to PetSitsRUs!!🐶🐱🐰🐷🐠</h1>
 
 <body>
@@ -5,35 +6,10 @@
 PetSitsRUs is a pet sitting service providing reliable, safe pet care by experienced professionals in your own home where your pets are most comfortable, for any period of time.
 </p></body>
 
-<% if session[:owner_id] == nil %>
 
-  <%= form_tag login_path, method: 'get' do %>
-  <%= submit_tag 'Existing User Login' %>
-  <% end %>
 
-  <%= form_tag new_owner_path, method: 'get' do %>
-  <%= submit_tag 'New User' %>
-  <% end %>
-
-<% else %>
-
-  <% @owner = Owner.find_by(id: session[:owner_id]) %>
-
-  <%= form_tag owner_path(@owner), method: 'get' do %>
-  <%= submit_tag 'My Profile' %>
-  <% end %>
-
-  <%= form_tag new_pet_path, method: 'get' do %>
-  <%= submit_tag 'Create a New Pet' %>
-  <% end %>
-
-  <%= form_tag new_appointment_path, method: 'get' do %>
-  <%= submit_tag 'Create a New Appointment' %>
-  <% end %>
-
-  <%= form_tag logout_path, method: 'get' do %>
-  <%= submit_tag 'Logout' %>
-  <% end %>
-
+<%= form_tag new_owner_path, method: 'get' do %>
+  <%= submit_tag "Get Started"%><br>
 <% end %>
+
 </center>

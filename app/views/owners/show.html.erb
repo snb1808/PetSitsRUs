@@ -1,43 +1,3 @@
-
-<center>
-<button type="button" class="btn btn-success">
-<%= link_to owners_path, method: 'get' do %>
-<%= 'Home' %><br>
-<% end %>
-</button>
-
-<button type="button" class="btn btn-success">
-<%= link_to edit_owner_path, method: 'get' do %>
-<%= 'Edit my Profile' %><br>
-<% end %>
-</button>
-
-<button type="button" class="btn btn-success">
-<%= link_to new_pet_path, method: 'get' do %>
-<%= 'Add a Pet' %><br>
-<% end %>
-</button>
-
-<button type="button" class="btn btn-success">
-<%= link_to new_appointment_path, method: 'get' do %>
-<%= 'Create an Appointment' %><br>
-<% end %>
-</button>
-
-<button type="button" class="btn btn-success">
-<%= link_to appointment_path, method: 'get' do %>
-<%= 'Appointments' %><br>
-<% end %>
-</button>
-
-<button type="button" class="btn btn-success">
-<%= link_to owner_path(@owner), method: 'delete' do %>
-<%= 'Delete Account' %><br>
-<% end %>
-</button>
-</center>
-
-
 <center><h1>My Profile</h1>
 
 <img src="<%= @owner.img_url %>" height="200">
@@ -50,28 +10,5 @@
 <p>Address: <%= @owner.address %></p>
 <p>Telephone number: <%= @owner.telephone_number %></p>
 <p>Email: <%= @owner.email %></p>
-
-<h3>My Pets:</h3>
-<% @owner.pets.each do |pet| %>
-<p><%= link_to pet.name, pet_path(pet) %></p>
-<% end %>
-
-
-
-<%= form_tag new_pet_path, method: 'get' do %>
-<%= submit_tag 'Add a Pet' %><br>
-<% end %>
-
-<%= form_tag new_appointment_path, method: 'get' do %>
-<%= submit_tag 'Create an Appointment' %><br>
-<% end %>
-
-<%= form_tag appointments_path, method: 'get' do %>
-<%= submit_tag "My Appointments" %><br>
-<% end %>
-
-<%= form_tag owner_path(@owner), method: 'delete' do %>
-<%= submit_tag "Delete Account", data: { confirm: "Are you sure?" } %><br>
-<% end %>
 
 </center>

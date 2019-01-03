@@ -2,6 +2,11 @@ class PetsController < ApplicationController
 
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @owner = Owner.find_by(id: session[:owner_id])
+    @pets = @owner.pets
+  end
+
   def new
     @pet = Pet.new
   end

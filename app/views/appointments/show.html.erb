@@ -5,20 +5,12 @@
 <p>End Date: <%= @appointment.start_date  %></p>
 <p>Sitter: <%= @appointment.sitter.full_name %></p>
 
-<%= form_tag owners_path, method: 'get' do %>
-<%= submit_tag 'Home' %>
-<% end %>
-
-<%= form_tag owner_path(@appointment.pet.owner), method: 'get' do %>
-<%= submit_tag 'Your Profile' %>
-<% end %>
-
 <%= form_tag appointments_path, method: 'get' do %>
 <%= submit_tag 'Back to all Appointments' %>
 <% end %>
 
-<%= form_tag appointment_path(@appointment), method: 'delete' do %>
-<%= submit_tag "Delete Appointment", data: { confirm: "Are you sure?" } %><br>
+<%= form_tag edit_appointment_path, method: 'get' do %>
+<%= submit_tag 'Edit Appointment' %>
 <% end %>
 
 </center>

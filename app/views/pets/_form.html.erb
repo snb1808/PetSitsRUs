@@ -21,11 +21,3 @@
 
   <p><%= f.submit %></p>
 <% end %>
-
-<%= form_tag owners_path, method: 'get' do %>
-<%= submit_tag 'Home' %>
-<% end %>
-
-<%= form_tag owner_path(session[:owner_id]), method: 'get' do %>
-<%= submit_tag 'Your Profile' %>
-<% end %>

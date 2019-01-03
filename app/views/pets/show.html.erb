@@ -10,16 +10,8 @@
 <p>Gender: <%= @pet.gender.capitalize %></p>
 <p>Address: <%= @pet.owner.address %></p>
 
-<%= form_tag owner_path(@pet.owner), method: 'get' do %>
-<%= submit_tag 'Back to Owner' %>
-<% end %>
-
 <%= form_tag edit_pet_path, method: 'get' do %>
-<%= submit_tag 'Edit Pet Details' %>
-<% end %>
-
-<%= form_tag pet_path(@pet), method: 'delete' do %>
-<%= submit_tag "Delete Pet", data: { confirm: "Are you sure?" } %><br>
+<%= submit_tag 'Edit Pet' %>
 <% end %>
 
 </center>
