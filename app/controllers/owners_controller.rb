@@ -47,7 +47,7 @@ class OwnersController < ApplicationController
   end
 
   def set_owner
-    @owner = Owner.find(params[:id])
+    @owner = Owner.find(session[:owner_id])
   end
 
   def owner_params

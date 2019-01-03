@@ -1,0 +1,33 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%= root_path %>">PetSitsRUs</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href='<%= root_path %>'>Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<%= session[:owner_id] ? owner_path(session[:owner_id]) : login_path %>">My Profile</a></li>
+          <li><a href="<%= session[:owner_id] ? edit_owner_path(session[:owner_id]) : login_path %>">Edit Account</a></li>
+          <li><a href="<%= session[:owner_id] ? logout_path : owners_path %>">Logout</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pets <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<%= session[:owner_id] ? pets_path : login_path %>">My Pets</a></li>
+          <li><a href="<%= session[:owner_id] ? new_pet_path : login_path %>">Add Pet</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Appointments <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<%= session[:owner_id] ? appointments_path : login_path %>">My Appointments</a></li>
+          <li><a href="<%= session[:owner_id] ? new_appointment_path : login_path %>">New Appointment</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="<%= new_owner_path %>"><span class="glyphicon glyphicon-user"></span> New User</a></li>
+      <li><a href="<%= login_path %>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
