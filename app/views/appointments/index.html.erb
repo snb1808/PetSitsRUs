@@ -1,9 +1,36 @@
-<center><h2>All Appointments</h2>
+<center>
+
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      min-width:20%;
+      min-height:20%
+      max-width:50%;
+      max-height:70%;
+      height:auto;
+      color:#333333;
+      padding:3px;
+      margin-top: -10em;
+      margin-left: -11em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;
+      overflow:auto;">
+
+  <h2>All Appointments</h2>
 
   <% @appointments.each do |appointment| %>
-    <div>
+    <p>
       <%= link_to "#{appointment.pet.name} beginning #{appointment.start_date}", appointment_path(appointment) %>
-    </div>
+    </p>
   <% end %>
+
+  <p><%= form_tag new_appointment_path, method: 'get' do %>
+  <%= submit_tag 'Create a New Appointment' %>
+  <% end %></p>
+
+  </div>
 
 </center>

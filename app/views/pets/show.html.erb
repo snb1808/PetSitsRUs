@@ -1,4 +1,17 @@
 <center>
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      width:20em;
+      color:#333333;
+      padding:3px;
+      margin-top: -16em;
+      margin-left: -10em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;">
 <h1>Pet Profile</h1>
 
 <img src="<%= @pet.img_url %>" height=200>
@@ -13,5 +26,11 @@
 <%= form_tag edit_pet_path, method: 'get' do %>
 <%= submit_tag 'Edit Pet' %>
 <% end %>
+
+<%= form_tag pets_path, method: 'get' do %>
+<%= submit_tag 'Back to All Pets' %>
+<% end %>
+
+</div>
 
 </center>

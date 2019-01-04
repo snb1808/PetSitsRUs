@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>PetSitsRUs</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
 
@@ -24,4 +28,21 @@
     <% end %>
     <%= yield %>
   </body>
+
+  <body style="background-image: url(&quot;https://cdn.coolstart.com/backgdound_ex_id_284/1529312595721.webp&quot;);">
+    <div class="col-2 screensaver" style="opacity: 0;">
+      <main class="cd-main-content">
+        <img src="https://frenchbulldog.coolstart.com/templates/default/img/logo.png" alt="Cool Start">
+      <span class="logo-subtitle long-subtitle" style="margin-top: 11px;">
+      </span>
+    </main>
+    <div class="modal" id="gallery-modal">
+      <div class="modal-header">
+        <a href="#" class="modal-close">
+          <i class="fa fa-times" aria-hidden="true">
+          </i>
+        </a>
+      </div>
+</body>
+
 </html>

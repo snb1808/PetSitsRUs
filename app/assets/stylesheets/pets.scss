@@ -1,3 +1,36 @@
 // Place all the styles related to the Pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.show-page {
+  background-color: #ffffff;
+  background-repeat:repeat-x;
+  border:1px solid #d1c7ac;
+  min-width: 400px;
+  width:20%;
+  max-height:70vh;
+  color:#333333;
+  padding:3px;
+  font-family:tahoma, arial, sans-serif;
+  border-radius:15px;
+  overflow:auto;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pet-image {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  border: 1px solid pink;
+}

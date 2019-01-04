@@ -1,4 +1,22 @@
-<center><h1>Appointment Details</h1>
+<center>
+
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      min-width:30%;
+      min-height:35%;
+      height:auto;
+      color:#333333;
+      padding:3px;
+      margin-top: -10em;
+      margin-left: -15em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;">
+
+  <h1>Appointment Details</h1>
 
 <p>Pet: <%= @appointment.pet.name %></p>
 <p>Start Date: <%= @appointment.start_date %></p>
@@ -12,5 +30,7 @@
 <%= form_tag edit_appointment_path, method: 'get' do %>
 <%= submit_tag 'Edit Appointment' %>
 <% end %>
+
+</div>
 
 </center>

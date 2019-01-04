@@ -1,10 +1,31 @@
 <center>
+
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      width:20em;
+      color:#333333;
+      padding:3px;
+      margin-top: -24em;
+      margin-left: -10em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;">
+
 <h1>Edit Pet</h1>
+
+<img src="<%= @pet.img_url %>" style=max-width:10em;height:auto;>
 
 <%= render 'form' %>
 
-<%= form_tag pet_path(@pet), method: 'delete' do %>
-  <%= submit_tag "Delete Pet", data: { confirm: "Are you sure?" } %><br>
-<% end %>
+<p><%= form_tag pet_path(@pet), method: 'get' do %>
+<%= submit_tag 'Back to Pet Profile' %>
+<% end %></p>
+
+<p><%= button_to "Delete Pet",  @pet, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this pet?" %>
+</p>
+</div>
 
 </center>

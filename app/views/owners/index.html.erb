@@ -1,15 +1,30 @@
-<img src="">
-<center><h1>🐶🐱🐰🐷🐠Welcome to PetSitsRUs!!🐶🐱🐰🐷🐠</h1>
+<center>
+<div style="position:fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff;
+    background-repeat:repeat-x;
+    border:1px solid #d1c7ac;
+    width:45em;
+    color:#333333;
+    padding:3px;
+    margin-top: -12em;
+    margin-left: -22em;
+    font-family:tahoma, arial, sans-serif;
+    border-radius:15px;">
+  <img src="images/pet_sits_r_us.png" style="max-width:100%;height:auto;">
+  <h1>🐶🐱🐰Welcome to PetSitsRUs!🐷🦄🐠</h1>
 
-<body>
   <p>
-PetSitsRUs is a pet sitting service providing reliable, safe pet care by experienced professionals in your own home where your pets are most comfortable, for any period of time.
-</p></body>
+  PetSitsRUs is a pet sitting service providing reliable, safe pet care by experienced professionals in your own home where your pets are most comfortable, for any period of time.
+  </p>
+
+  <% if session[:owner_id] == nil %>
+  <%= form_tag new_owner_path, method: 'get' do %>
+    <%= submit_tag "Get Started"%><br>
+    <% end %>
+  <% end %>
 
 
-
-<%= form_tag new_owner_path, method: 'get' do %>
-  <%= submit_tag "Get Started"%><br>
-<% end %>
-
+</div>
 </center>

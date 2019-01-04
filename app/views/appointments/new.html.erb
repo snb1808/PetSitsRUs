@@ -1,5 +1,28 @@
-<center><h1>Create a New Appointment</h1>
+<center>
+
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      width:30%;
+      height:55%;
+      color:#333333;
+      padding:3px;
+      margin-top: -15em;
+      margin-left: -15em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;">
+
+  <h1>Create New Appointment</h1>
 
 <%= render 'form' %>
+
+<%= form_tag appointments_path, method: 'get' do %>
+<%= submit_tag 'Back to all Appointments' %>
+<% end %>
+
+</div>
 
 </center>

@@ -1,5 +1,18 @@
-<center><h1>My Pets</h1>
-<% @pets.each do |pet| %>
-<p><%= link_to pet.name, pet_path(pet) %></p>
-<% end %>
+<center>
+<div class="show-page">
+  <h1>My Pets</h1>
+  <p><%= form_tag new_pet_path, method: 'get' do %>
+  <%= submit_tag 'Create a New Pet' %>
+  <% end %></p>
+    <% @pets.each do |pet| %>
+      <div class="pet-card">
+        <h3><%= pet.name %></h3>
+        <%= link_to pet_path(pet) do %>
+          <div class="pet-image" style='background-image: url("<%= image_path pet.img_url%>")'>
+
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+</div>
 </center>
