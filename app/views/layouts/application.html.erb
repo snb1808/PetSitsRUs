@@ -30,7 +30,23 @@
     <%= yield %>
   </body>
 
-  <body style="background-image: url(&quot;https://cdn.coolstart.com/backgdound_ex_id_284/1529312595721.webp&quot;);">
+  <% pics = ['https://cdn.coolstart.com/backgdound_ex_id_284/1529312595721.webp',
+  'https://cdn.coolstart.com/backgdound_ex_id_284/1529312576653.webp',
+  'http://3.bp.blogspot.com/-Gf-f7GSnp8U/Tvc3auZfg8I/AAAAAAAAT1s/zaWFB9tHT3c/s1600/Animals%2BWallpapers.jpg',
+  'http://4.bp.blogspot.com/-IplB-4U8BtE/T8JYfSHmZVI/AAAAAAAAAKQ/_5Az-_DKkK0/s1600/The+Tiger+Strikes+Again+Wild+Animals.jpg',
+  'http://2.bp.blogspot.com/-D-v4ccmHmPA/TrG4hPjOWEI/AAAAAAAAH58/jBEzZ3xvnnM/s1600/Best-top-desktop-animals-wallpapers-hd-animal-wallpaper-picture-image-photo-4.jpg',
+  'http://wallpoper.com/images/00/44/85/04/wild-animal_00448504.jpg',
+  'http://getwallpapers.com/wallpaper/full/e/2/3/367833.jpg',
+  'http://4.bp.blogspot.com/-6bYCabC8SQ4/UgtoVLiQK8I/AAAAAAAAA_M/sjYkopPwZgc/s1600/Dog-Funny-Animal-Background-HD-Wallpaper.jpg',
+  'http://wallpapercave.com/wp/ebW13QE.jpg',
+  'http://getwallpapers.com/wallpaper/full/e/7/2/1150567-funny-cat-wallpapers-for-desktop-1920x1080-ipad-pro.jpg',
+  'http://petbiography.com/wp-content/uploads/2016/08/pet-biography-standard-package.jpg',
+  'http://www.cbc.ca/doczone/content/images/episodes/exoticpets_rules.jpg',
+  'http://wallpapercave.com/wp/0P82yZb.jpg',
+  'https://images.fineartamerica.com/images-medium-large-5/dolphin-and-cow-as-seen-on-tv-douglas-martin.jpg'] %>
+  <% num = rand(0...13) %>
+
+  <body style="background-image: url(<%= pics[num] %>);">
     <div class="col-2 screensaver" style="opacity: 0;">
       <main class="cd-main-content">
         <img src="https://frenchbulldog.coolstart.com/templates/default/img/logo.png" alt="Cool Start">
