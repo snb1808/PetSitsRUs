@@ -6,19 +6,22 @@
       background-color: #ffffff;
       background-repeat:repeat-x;
       border:1px solid #d1c7ac;
-      width:20em;
+      width:35em;
       color:#333333;
       padding:3px;
-      margin-top: -24em;
-      margin-left: -10em;
+      margin-top: -22em;
+      margin-left: -17em;
       font-family:tahoma, arial, sans-serif;
-      border-radius:15px;">
+      border-radius:15px;
+      opacity:0.9;">
 
-<h1>Edit Pet</h1>
+<h1>Edit <%= @pet.name.capitalize %></h1>
 
 <img src="<%= @pet.img_url %>" style=max-width:10em;height:auto;>
 
-<%= render 'form' %>
+<br>
+
+<p><%= render 'form' %></p>
 
 <p><%= form_tag pet_path(@pet), method: 'get' do %>
 <%= submit_tag 'Back to Pet Profile' %>

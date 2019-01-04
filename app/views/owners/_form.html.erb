@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<center>
-  <%= form_for @owner do |f| %>
-=======
->>>>>>> origin/Andy
 
 <div class="row align-items-center justify-content-center">
   <%= bootstrap_form_for(@owner, layout: :horizontal, control_col: "bootstrap_col") do |f| %>
 
-    <div class="form-container">
+    <div class="user-form-container">
     <%= f.text_field :first_name %>
 
     <%= f.text_field :last_name %>
@@ -26,13 +21,8 @@
 
     <%= f.password_field :password_confirmation %>
 
-<<<<<<< HEAD
-<% end %>
-</center>
-=======
-    <div class="actions"><%= f.submit "Create Owner", :class => "button" %></div><br>
+    <div class="actions"><%= f.submit :class => "button" %></div><br>
 
   </div>
   <% end %>
 </div>
->>>>>>> origin/Andy

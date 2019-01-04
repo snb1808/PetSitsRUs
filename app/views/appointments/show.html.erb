@@ -14,7 +14,8 @@
       margin-top: -10em;
       margin-left: -15em;
       font-family:tahoma, arial, sans-serif;
-      border-radius:15px;">
+      border-radius:15px;
+      opacity:0.9;">
 
   <h1>Appointment Details</h1>
 
@@ -23,12 +24,12 @@
 <p>End Date: <%= @appointment.start_date  %></p>
 <p>Sitter: <%= @appointment.sitter.full_name %></p>
 
-<%= form_tag appointments_path, method: 'get' do %>
-<%= submit_tag 'Back to all Appointments' %>
+<p><%= form_tag appointments_path, method: 'get' do %>
+<%= submit_tag 'Back to all Appointments' %></p>
 <% end %>
 
-<%= form_tag edit_appointment_path, method: 'get' do %>
-<%= submit_tag 'Edit Appointment' %>
+<p><%= form_tag edit_appointment_path, method: 'get' do %>
+<%= submit_tag 'Edit Appointment' %></p>
 <% end %>
 
 </div>

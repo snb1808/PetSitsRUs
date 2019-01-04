@@ -1,6 +1,23 @@
 <center>
+
+  <div style="position:fixed;
+      top: 50%;
+      left: 50%;
+      background-color: #ffffff;
+      background-repeat:repeat-x;
+      border:1px solid #d1c7ac;
+      width:20em;
+      height:19em;
+      color:#333333;
+      padding:3px;
+      margin-top: -18em;
+      margin-left: -10em;
+      font-family:tahoma, arial, sans-serif;
+      border-radius:15px;
+      opacity:0.9;">
+
   <h1>Login</h1>
-  
+
   <%= form_tag login_path, method: 'post' do %>
   <%= label_tag :username %>
   <%= text_field_tag :username %><br>
@@ -8,12 +25,18 @@
   <%= label_tag :password %>
   <%= password_field_tag :password %><br>
 
-  <%= submit_tag 'Login' %>
+  <br>
+
+  <p><%= submit_tag 'Login' %></p>
 
 <% end %>
 
-<%= form_tag owners_path, method: 'get' do %>
-<%= submit_tag 'Home' %><br>
+<p><%= form_tag owners_path, method: 'get' do %>
+<%= submit_tag 'Home' %></p>
 <% end %>
+
+<p><%= link_to "Don't have an account?", new_owner_path %></p>
+
+</div>
 
 </center>
