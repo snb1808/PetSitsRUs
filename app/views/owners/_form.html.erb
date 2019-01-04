@@ -1,32 +1,28 @@
-<center><%= form_for @owner do |f| %>
 
-  <p><%= f.label 'First Name' %></p>
-  <p><%= f.text_field :first_name %></p>
+<div class="row align-items-center justify-content-center">
+  <%= bootstrap_form_for(@owner, layout: :horizontal, control_col: "bootstrap_col") do |f| %>
 
-  <p><%= f.label 'Last Name' %></p>
-  <p><%= f.text_field :last_name %></p>
+    <div class="form-container">
+    <%= f.text_field :first_name %>
 
-  <p><%= f.label 'Username' %></p>
-  <p><%= f.text_field :username %></p>
+    <%= f.text_field :last_name %>
 
-  <p><%= f.label 'Address' %></p>
-  <p><%= f.text_field :address %></p>
+    <%= f.text_field :username %>
 
-  <p><%= f.label 'Telephone Number' %></p>
-  <p><%= f.text_field :telephone_number %></p>
+    <%= f.text_field :address %>
 
-  <p><%= f.label 'Email' %></p>
-  <p><%= f.text_field :email %></p>
+    <%= f.text_field :telephone_number %>
 
-  <p><%= f.label 'Image URL' %></p>
-  <p><%= f.text_field :img_url %></p>
+    <%= f.text_field :email %>
 
-  <p><%= f.label 'Password' %></p>
-  <p><%= f.password_field :password %></p>
+    <%= f.text_field :img_url %>
 
-  <p><%= f.label 'Confirm Password' %></p>
-  <p><%= f.password_field :password_confirmation %></p>
+    <%= f.password_field :password %>
 
-  <p><%= f.submit %></p>
+    <%= f.password_field :password_confirmation %>
 
-<% end %>
+    <div class="actions"><%= f.submit "Create Owner", :class => "button" %></div><br>
+
+  </div>
+  <% end %>
+</div>
