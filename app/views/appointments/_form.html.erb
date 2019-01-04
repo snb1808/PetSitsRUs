@@ -1,21 +1,24 @@
-<center><%= form_for @appointment do |f| %>
 
-  <% @owner = Owner.find_by(id: session[:owner_id]) %>
-  <% @pets = @owner.pets %>
+<div class="row-no-gutters">
+<%= bootstrap_form_for(@appointment, layout: :horizontal, control_col: "bootstrap_col") do |f| %>
 
-  <p><%= f.label 'pet_id' %></p>
-  <p><%= f.collection_select :pet_id, @pets, :id, :name %></p>
+  <div class="form-container">
+    <% @owner = Owner.find_by(id: session[:owner_id]) %>
+    <% @pets = @owner.pets %>
 
-  <p><%= f.label 'sitter_id' %></p>
-  <p><%= f.collection_select :sitter_id, Sitter.all, :id, :full_name %><br>
-  <%= link_to('Not sure which sitter to choose?', { action: 'index', controller: 'sitters' }, { target: '_blank' }) %></p>
+    <%= f.collection_select :pet_id, @pets, :id, :name %>
 
-  <p><%= f.label 'start_date' %></p>
-  <p><%= f.date_select :start_date %></p>
+    <%= f.collection_select :sitter_id, Sitter.all, :id, :full_name %>
 
-  <p><%= f.label 'end_date' %></p>
-  <p><%= f.date_select :end_date %></p>
+    <%= link_to('Not sure which sitter to choose?', { action: 'index', controller: 'sitters' }, { target: '_blank' }) %>
 
-  <p><%= f.submit %></p>
+    <%= f.date_select :start_date %>
+
+    <%= f.date_select :end_date %>
+
+    <div class="actions"><%= f.submit "Create Appointment", :class => "button" %></div>
+
+  </div>
 
 <% end %>
+</div>

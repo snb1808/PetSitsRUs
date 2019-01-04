@@ -1,23 +1,22 @@
-<%= form_for @pet do |f| %>
 
-  <% genders = ['Male', 'Female', 'Not Sure'] %>
+<div class="row align-items-center justify-content-center">
+<%= bootstrap_form_for(@pet, layout: :horizontal, control_col: "bootstrap_col") do |f| %>
+  <div class="form-container">
+    <% genders = ['Male', 'Female', 'Not Sure'] %>
 
-  <p><%= f.label 'Name' %></p>
-  <p><%= f.text_field :name %></p>
+    <%= f.text_field :name %>
 
-  <p><%= f.label 'Species' %></p>
-  <p><%= f.text_field :species %></p>
+    <%= f.text_field :species %>
 
-  <p><%= f.label 'Gender' %></p>
-  <p><%= f.collection_select(:gender, genders, :downcase, :to_s) %></p>
+    <%= f.text_field :age %>
 
-  <p><%= f.label 'Age' %></p>
-  <p><%= f.text_field :age %></p>
+    <%= f.text_field :img_url %>
 
-  <p><%= f.label 'Image URL' %></p>
-  <p><%= f.text_field :img_url %></p>
+    <%= f.collection_select(:gender, genders, :downcase, :to_s) %>
 
-  <%= f.hidden_field(:owner_id, :value => session[:owner_id]) %>
+    <%= f.hidden_field(:owner_id, :value => session[:owner_id]) %>
 
-  <p><%= f.submit %></p>
+    <div class="actions"><%= f.submit "Add Pet", :class => "button" %></div>
+  </div>
 <% end %>
+</div>
